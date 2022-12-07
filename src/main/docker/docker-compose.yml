@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  journal:
+    image: postgres:15.1
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=journal
+    ports:
+      - '5432:5432'
